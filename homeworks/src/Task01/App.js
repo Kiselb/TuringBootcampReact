@@ -37,7 +37,8 @@ function App() {
     }
     function addOnTop() {
         const text = prompt('Введите текст элемента')
-        if (text.trim().length > 0) {
+
+        if (text !== null && text.trim().length > 0) {
             setItems(
                 [{text: text, uuid: uuidv4(), selected: false}, ...items]
             )
@@ -45,7 +46,8 @@ function App() {
     }
     function addToBottom() {
         const text = prompt('Введите текст элемента')
-        if (text.trim().length > 0) {
+
+        if (text !== null && text.trim().length > 0) {
             setItems(
                 [...items, {text: text, uuid: uuidv4(), selected: false}]
             )
@@ -57,9 +59,20 @@ function App() {
 
         const text = prompt('Введите текст элемента')
 
-        if (text.trim().length > 0) {
+        if (text !== null && text.trim().length > 0) {
             setItems(
                 [...items.slice(0, index + 1), {text: text, uuid: uuidv4(), selected: false}, ...items.slice(index + 1)]
+            )
+        }
+    }
+    function addInMiddle() {
+        if (items.length < 2) return;
+
+        const text = prompt('Введите текст элемента')
+
+        if (text !== null && text.trim().length > 0) {
+            setItems(
+                [ ...items.slice(0, Math.floor(items.length / 2)), {text: text, uuid: uuidv4(), selected: false}, ...items.slice(Math.floor(items.length / 2))]
             )
         }
     }
@@ -73,6 +86,13 @@ function App() {
             items.slice(0, -1)
         )
     }
+    function removeMiddle() {
+        if (items.length < 3) return;
+
+        setItems(
+            [ ...items.slice(0, Math.floor(items.length / 2)), ...items.slice(Math.floor(items.length / 2) + 1)]
+        )
+    }
     function removeSelected() {
         const index = getIndexSelected()
         if (index < 0) return
@@ -84,9 +104,11 @@ function App() {
             <h1>Turing Bootcamp React Course Task #1</h1>
             <button className='action' onClick={addOnTop}>Добавить в начало</button>
             <button className='action' onClick={addBellow}>Добавить после отмеченного</button>
+            <button className='action' onClick={addInMiddle}>Добавить в середину</button>
             <button className='action' onClick={addToBottom}>Добавить в конец</button>
             <button className='action' onClick={removeTop}>Удалить первый</button>
             <button className='action' onClick={removeSelected}>Удалить отмеченный</button>
+            <button className='action' onClick={removeMiddle}>Удалить средний</button>
             <button className='action' onClick={removeBottom}>Удалить последний</button>
             <ItemsList items={items} onToggle={onToggle}></ItemsList>
         </div>

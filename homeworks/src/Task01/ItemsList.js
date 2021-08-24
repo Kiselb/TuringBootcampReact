@@ -10,12 +10,12 @@ const styles = {
     }
 }
 
-export default function ItemsList(props) {
+export default function ItemsList({items, onToggle}) {
     return (
         <ul style={styles.ul}>
-            {props.items.map((item) => {
+            {items.map((item) => {
                 return (
-                    <Item text={item.text} key={item.uuid} uuid={item.uuid} selected={item.selected} onToggle={props.onToggle}></Item>
+                    <Item text={item.text} key={item.uuid} uuid={item.uuid} selected={item.selected} onToggle={onToggle}></Item>
                 )
             })}
         </ul>
