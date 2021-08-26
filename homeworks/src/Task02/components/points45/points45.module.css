@@ -1,0 +1,20 @@
+.input {
+    font: inherit;
+    width: 20rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+}
+.button {
+    font: inherit;
+    width: auto;
+}
+.ol {
+    font: inherit;
+    width: 20rem;
+    height:10rem;
+    overflow-y: scroll;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

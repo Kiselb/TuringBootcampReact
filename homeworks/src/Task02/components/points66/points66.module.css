@@ -1,0 +1,12 @@
+.input {
+    font: inherit;
+    width: 10rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+.button {
+    font: inherit;
+    width: 10rem;
+    padding: 0.25rem;
+}

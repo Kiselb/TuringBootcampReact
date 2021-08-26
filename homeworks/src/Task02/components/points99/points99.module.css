@@ -1,0 +1,19 @@
+.input {
+    font: inherit;
+    width: 20rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+}
+.button {
+    font: inherit;
+    width: auto;
+}
+.select {
+    font: inherit;
+    width: 20rem;
+    height: auto;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
