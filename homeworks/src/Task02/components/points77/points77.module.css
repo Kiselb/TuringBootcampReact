@@ -1,0 +1,9 @@
+.box {
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    visibility: hidden;
+}
+.on {
+    visibility: visible;
+}
