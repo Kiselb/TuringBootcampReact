@@ -1,0 +1,14 @@
+.button {
+    font:inherit;
+    height: 2.5rem;
+    width: auto;
+    min-width: 5rem;
+    border: 1px solid #777;
+    background: limegreen;
+}
+.button:hover {
+    color: white;
+}
+.button:active {
+    background: yellow;
+}
