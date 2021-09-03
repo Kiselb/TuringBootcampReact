@@ -1,0 +1,13 @@
+.container {
+    font: inherit;
+    width: 100%;
+    height: 20rem;
+    border: 1px solid #ececec;
+    overflow-y: scroll;
+}
+.command {
+    font:inherit;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+}
