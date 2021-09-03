@@ -1,0 +1,11 @@
+.label {
+    font:inherit;
+    width: 20rem;
+}
+.input {
+    font:inherit;
+    width: 100%;
+}
+.list {
+    margin-top: 2rem;
+}
