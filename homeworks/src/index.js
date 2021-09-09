@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './Task04/index.css';
-import App from './Task05/App';
+import App from './Task06/App';
 
 import reportWebVitals from './reportWebVitals';
 
